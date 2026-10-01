@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexandre CUNHA | Portfolio Bac Pro CIEL</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-blue-100 selection:text-blue-900">
+
+    <!-- Navigation claire et simple -->
+    <header class="fixed top-0 left-0 w-full bg-slate-50/90 backdrop-blur-md z-50 border-b border-slate-200">
+        <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#hero" class="font-semibold text-slate-900 tracking-tight hover:text-blue-600 transition">Alexandre CUNHA</a>
+            
+            <!-- Navigation Ordinateur -->
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-blue-600 transition">À propos</a>
+                <a href="#skills" class="hover:text-blue-600 transition">Compétences</a>
+                <a href="#experience" class="hover:text-blue-600 transition">Parcours & Stages</a>
+                <a href="#projects" class="hover:text-blue-600 transition">Projets TP</a>
+                <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+            </nav>
+
+            <!-- Bouton Menu Mobile -->
+            <button id="menu-btn" class="md:hidden text-slate-600 hover:text-slate-900 focus:outline-none" aria-label="Ouvrir le menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Navigation Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 bg-slate-50 border-b border-slate-200 space-y-3 text-sm font-medium text-slate-600">
+            <a href="#about" class="block hover:text-blue-600 transition">À propos</a>
+            <a href="#skills" class="block hover:text-blue-600 transition">Compétences</a>
+            <a href="#experience" class="block hover:text-blue-600 transition">Parcours & Stages</a>
+            <a href="#projects" class="block hover:text-blue-600 transition">Projets TP</a>
+            <a href="#contact" class="block hover:text-blue-600 transition">Contact</a>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 pt-28 pb-16 space-y-20">
+
+        <!-- En-tête / Accueil -->
+        <section id="hero" class="space-y-6 pt-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 border border-blue-200 text-blue-700 text-xs font-medium rounded-full">
+                <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+                Étudiant Bac Pro CIEL
+            </div>
+            
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 tracking-tight leading-tight">
+                Alexandre CUNHA<br>
+                <span class="text-blue-600 font-semibold text-2xl sm:text-3xl md:text-4xl">Étudiant en Bac Pro CIEL</span>
+            </h1>
+            
+            <p class="text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed">
+                Passionné par les réseaux informatiques, les systèmes matériels et la cybersécurité. En formation au Lycée Joséphine Baker pour maîtriser l'installation, la maintenance et la sécurisation des infrastructures numériques.
+            </p>
+
+            <div class="pt-2 flex flex-wrap gap-4">
+                <a href="#contact" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg shadow-sm transition">
+                    Me contacter
+                </a>
+                <a href="#experience" class="px-5 py-2.5 bg-white hover:bg-slate-100 text-slate-700 text-sm font-medium rounded-lg border border-slate-200 shadow-sm transition">
+                    Voir mes stages
+                </a>
+            </div>
+        </section>
+
+        <!-- À Propos -->
+        <section id="about" class="space-y-6 border-t border-slate-200 pt-16">
+            <h2 class="text-xs font-bold uppercase tracking-wider text-blue-600">À propos de moi</h2>
+            <div class="grid md:grid-cols-3 gap-8 items-start">
+                <div class="md:col-span-2 space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+                    <p>
+                        Actuellement élève en <strong>Bac Professionnel CIEL</strong> (Cybersécurité, Informatique et réseaux, Électronique) au lycée Joséphine Baker à Hanches, j'acquiers au quotidien des compétences théoriques et pratiques en atelier et en entreprise.
+                    </p>
+                    <p>
+                        Rigoureux et curieux, je suis passionné par l'informatique, les réseaux et l'électronique. J'aime comprendre le fonctionnement des équipements et résoudre des pannes matérielles ou système.
+                    </p>
+                </div>
+                <!-- Encadré infos pratiques -->
+                <div class="p-5 bg-white rounded-xl border border-slate-200 shadow-sm space-y-3">
+                    <h3 class="text-sm font-semibold text-slate-900">Information</h3>
+                    <ul class="text-xs space-y-2 text-slate-600">
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>
+                            Filière : Bac Pro CIEL
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            Rambouillet (78120), France
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Certification PIX & PSC1
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compétences CIEL -->
+        <section id="skills" class="space-y-6 border-t border-slate-200 pt-16">
+            <h2 class="text-xs font-bold uppercase tracking-wider text-blue-600">Compétences Techniques</h2>
+            <div class="grid sm:grid-cols-2 gap-4">
+                
+                <!-- Réseaux -->
+                <div class="p-5 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                        <h3 class="font-semibold text-slate-900 text-sm">Réseaux & Serveurs</h3>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Configuration de serveurs de fichiers, test de réseaux WEP/WPA (Kali Linux), adressage IP et paramétrage d'équipements.
+                    </p>
+                </div>
+
+                <!-- Informatique -->
+                <div class="p-5 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+                        <h3 class="font-semibold text-slate-900 text-sm">Informatique & Systèmes</h3>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Installation/réinstallation de Windows et drivers, déploiement de Machines Virtuelles (VM), bootage de systèmes d'exploitation.
+                    </p>
+                </div>
+
+                <!-- Électronique -->
+                <div class="p-5 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        <h3 class="font-semibold text-slate-900 text-sm">Électronique & Métrologie</h3>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Réparation de matériel électronique de métrologie, branchement de circuits série/parallèle, liaison de câbles sur panneaux électriques.
+                    </p>
+                </div>
+
+                <!-- Cybersécurité -->
+                <div class="p-5 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                        <h3 class="font-semibold text-slate-900 text-sm">Cybersécurité & Pen Test</h3>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Initiation aux tests d'intrusion (Pen Test) avec la distribution Kali Linux sur réseaux sans fil, mises à jour de sécurité système.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Formation et Stages (PFMP) -->
+        <section id="experience" class="space-y-6 border-t border-slate-200 pt-16">
+            <h2 class="text-xs font-bold uppercase tracking-wider text-blue-600">Parcours & Stages (PFMP)</h2>
+            
+            <div class="space-y-6">
+                <!-- Formation Principale -->
+                <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                        <h3 class="text-base font-semibold text-slate-900">Bac Pro CIEL (Cybersécurité, Informatique et réseaux, Électronique)</h3>
+                        <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2.5 py-1 rounded-full w-fit">2024 - 2027</span>
+                    </div>
+                    <p class="text-xs text-slate-500">Lycée Joséphine Baker (Hanches)</p>
+                    <p class="text-xs text-slate-600 pt-1">
+                        Formation pratique et théorique en réseaux, installation systèmes, maintenance informatique, cybersécurité et électronique.
+                    </p>
+                </div>
+
+                <!-- Stage 4 : Cendyn France -->
+                <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                        <h3 class="text-base font-semibold text-slate-900">PFMP 4 (4 semaines) — Stage chez Cendyn France</h3>
+                        <span class="text-xs font-medium text-slate-500">Juin - Juillet 2026</span>
+                    </div>
+                    <p class="text-xs text-slate-500">Cendyn France — Sèvres & Paris 13ème</p>
+                    <ul class="text-xs text-slate-600 list-disc list-inside space-y-1 pt-1">
+                        <li>Immersion en entreprise dans le secteur des technologies et de l'informatique.</li>
+                        <li>Developpement d'un site web en HTML et en CSS.</li>
+                    </ul>
+                </div>
+
+                <!-- Stage 3 : Signal.fr -->
+                <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                        <h3 class="text-base font-semibold text-slate-900">PFMP 3 (4 semaines) — Stage chez Signal.fr</h3>
+                        <span class="text-xs font-medium text-slate-500">Novembre - Décembre 2025</span>
+                    </div>
+                    <p class="text-xs text-slate-500">Signal.fr — Villebon-sur-Yvette</p>
+                    <ul class="text-xs text-slate-600 list-disc list-inside space-y-1 pt-1">
+                        <li>Mise à jour d'OPS (ordinateurs intégrés aux écrans de conférence : Windows et drivers).</li>
+                        <li>Activité de Pen Test (test de pénétration sur réseaux WEP et WPA avec Kali Linux).</li>
+                        <li>Paramétrage d'écrans de salles de conférence (ViviTek et BenQ).</li>
+                    </ul>
+                </div>
+
+                <!-- Stage 2 : Instrumentys -->
+                <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                        <h3 class="text-base font-semibold text-slate-900">PFMP 2 (3 semaines) — Stage chez Instrumentys</h3>
+                        <span class="text-xs font-medium text-slate-500">Juin 2025</span>
+                    </div>
+                    <p class="text-xs text-slate-500">Instrumentys — Auneau-Bleury-Saint-Symphorien</p>
+                    <ul class="text-xs text-slate-600 list-disc list-inside space-y-1 pt-1">
+                        <li>Réparation de matériel électronique de métrologie.</li>
+                        <li>Création et configuration d'un serveur de fichiers.</li>
+                        <li>Réinstallation complète de systèmes d'exploitation Windows.</li>
+                    </ul>
+                </div>
+
+                <!-- Stage 1 : Eiffage -->
+                <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                        <h3 class="text-base font-semibold text-slate-900">PFMP 1 (3 semaines) — Stage chez Eiffage Construction Matériel</h3>
+                        <span class="text-xs font-medium text-slate-500">Février 2025</span>
+                    </div>
+                    <p class="text-xs text-slate-500">Eiffage Construction Matériel — Le Perray-en-Yvelines</p>
+                    <ul class="text-xs text-slate-600 list-disc list-inside space-y-1 pt-1">
+                        <li>Découverte du fonctionnement technique d'une cabine de grue.</li>
+                        <li>Liaisons et raccordements de câbles sur des panneaux électriques.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projets / Travaux Pratiques -->
+        <section id="projects" class="space-y-6 border-t border-slate-200 pt-16">
+            <h2 class="text-xs font-bold uppercase tracking-wider text-blue-600">Projets & Réalisations Pratiques</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Projet 1 : Réseaux -->
+                <div class="p-5 bg-white rounded-xl border border-slate-200 shadow-sm space-y-3 flex flex-col justify-between">
+                    <div class="space-y-2">
+                        <span class="text-[10px] font-semibold text-blue-600 uppercase bg-blue-50 px-2 py-0.5 rounded">Serveur & Réseau</span>
+                        <h3 class="font-semibold text-slate-900 text-sm">Serveur de Fichiers LAN</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Mise en place d'un serveur de fichiers dédié au stockage et au partage de données en réseau local lors d'un stage pratique.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Projet 2 : Cybersécurité -->
+                <div class="p-5 bg-white rounded-xl border border-slate-200 shadow-sm space-y-3 flex flex-col justify-between">
+                    <div class="space-y-2">
+                        <span class="text-[10px] font-semibold text-emerald-600 uppercase bg-emerald-50 px-2 py-0.5 rounded">Kali Linux</span>
+                        <h3 class="font-semibold text-slate-900 text-sm">Pen Test Wi-Fi</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Analyse de la sécurité de clés WEP/WPA sur PC via la distribution Kali Linux pour identifier les vulnérabilités réseau.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Projet 3 : Électronique -->
+                <div class="p-5 bg-white rounded-xl border border-slate-200 shadow-sm space-y-3 flex flex-col justify-between sm:col-span-2 lg:col-span-1">
+                    <div class="space-y-2">
+                        <span class="text-[10px] font-semibold text-purple-600 uppercase bg-purple-50 px-2 py-0.5 rounded">Électronique</span>
+                        <h3 class="font-semibold text-slate-900 text-sm">Métrologie & Raccordements</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Câblage de circuits électriques, raccordement sur armoires/panneaux et maintenance sur instruments de mesure.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="space-y-6 border-t border-slate-200 pt-16">
+            <h2 class="text-xs font-bold uppercase tracking-wider text-blue-600">Contact</h2>
+            <div class="p-8 bg-white rounded-2xl border border-slate-200 shadow-sm text-center space-y-4">
+                <h3 class="text-xl font-semibold text-slate-900">Me contacter</h3>
+                <p class="text-sm text-slate-600 max-w-md mx-auto">
+                    N'hésitez pas à me contacter par email ou téléphone pour toute opportunité de stage ou information.
+                </p>
+                
+                <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+                    <a href="mailto:alexandreguy.cunha@gmail.com" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg shadow-sm transition w-full sm:w-auto">
+                        Envoyer un email
+                    </a>
+                    <button id="copy-email-btn" class="px-5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-medium rounded-lg transition w-full sm:w-auto">
+                        Copier l'email
+                    </button>
+                </div>
+                
+                <!-- Indication d'autres coordonnées -->
+                <div class="pt-4 text-xs text-slate-500 space-y-1 border-t border-slate-100 max-w-xs mx-auto">
+                    <p><strong>Téléphone :</strong> +33 6 43 70 22 79</p>
+                    <p><strong>Email :</strong> alexandreguy.cunha@gmail.com</p>
+                    <p><strong>Localisation :</strong> Rambouillet (78120)</p>
+                </div>
+
+                <!-- Message de confirmation copie -->
+                <p id="copy-status" class="text-xs text-emerald-600 h-4 transition-opacity opacity-0 font-medium"></p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="border-t border-slate-200 bg-white py-6 text-center text-xs text-slate-500">
+        <div class="max-w-4xl mx-auto px-6">
+            <p>&copy; <span id="year"></span> Alexandre CUNHA — Portfolio Étudiant Bac Pro CIEL</p>
+        </div>
+    </footer>
+
+    <!-- Logique JavaScript -->
+    <script>
+        // Année automatique dans le footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Gestion du menu mobile
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Bouton de copie d'email
+        const copyBtn = document.getElementById('copy-email-btn');
+        const copyStatus = document.getElementById('copy-status');
+        const emailToCopy = 'alexandreguy.cunha@gmail.com';
+
+        copyBtn.addEventListener('click', () => {
+            const tempInput = document.createElement('input');
+            tempInput.value = emailToCopy;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            copyStatus.textContent = 'Adresse email copiée !';
+            copyStatus.classList.remove('opacity-0');
+
+            setTimeout(() => {
+                copyStatus.classList.add('opacity-0');
+            }, 2500);
+        });
+    </script>
+</body>
+</html>
